@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>
+        {% if title %}
+        <h2>{{ title }}</h2>
+        {% else %}
+        Welcome To World Of Yoga
+        {% endif %}
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
+        integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+    <!-- Vendor CSS Files -->
+    <!-- Favicon -->
+    <link href="{{ url_for('static',filename='img/favicon.ico') }}" rel="icon">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS Libraries -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="{{ url_for('static',filename='lib/animate/animate.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static',filename='lib/flaticon/font/flaticon.css') }}" rel="stylesheet">
+    <!-- <link href="{{ url_for('static',filename='/lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static',filename='lib/lightbox/css/lightbox.min.css') }}" rel="stylesheet"> -->
+    <link href="{{ url_for('static',filename='lib/owlcarousel/owl.carousel.min.js') }}" rel="stylesheet">
+    <link href="{{ url_for('static',filename='lib/animate/animate.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static',filename='lib/flaticon/font/flaticon.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static',filename='lib/lightbox/css/lightbox.min.css') }}" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/style1.css') }}">
+
+</head>
+
+
+
+<body>
+    <!-- Top Bar Start -->
+    <div class="top-bar d-none d-md-block">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="top-bar-left">
+                        <div class="text">
+                            <i class="far fa-clock"></i>
+                            <h2>8:00 - 9:00</h2>
+                            <p>Mon - Fri</p>
+                        </div>
+                        <div class="text">
+                            <i class="fa fa-phone-alt"></i>
+                            <h2>+123 456 7890</h2>
+                            <p>For Appointment</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="top-bar-right">
+                        <div class="social">
+                            <a href=""><i class="fab fa-twitter"></i></a>
+                            <a href=""><i class="fab fa-facebook-f"></i></a>
+                            <a href=""><i class="fab fa-linkedin-in"></i></a>
+                            <a href=""><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Top Bar End -->
+
+    <!-- Nav Bar Start -->
+    <div class="navbar navbar-expand-lg bg-dark navbar-dark">
+        <div class="container-fluid">
+            <a href="/" class="navbar-brand">Y<span>oo</span>ga</a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                <div class="navbar-nav ml-auto">
+                    <a href="{{url_for('home')}}" class="nav-item nav-link active">Home</a>
+                    <a href="{{url_for('aboutus')}}" class="nav-item nav-link">About Us</a>
+                    <a href="{{url_for('services')}}" class="nav-item nav-link">Service</a>
+                    <a href="{{url_for('contact')}}" class="nav-item nav-link">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Nav Bar End -->
+    <div class="hero">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-sm-12 col-md-6">
+                    <div class="hero-text">
+                        <h1>Yoga Practice For Good Health</h1>
+                        <p>
+                            Lorem ipsum dolor sit amet elit. Phasell nec pretum mi. Curabi ornare velit non. Aliqua
+                            metus tortor auctor quis sem.
+                        </p>
+                        <div class="hero-btn">
+                            <a class="btn" href="">Join Now</a>
+                            <a class="btn" href="">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 d-none d-md-block">
+                    <div class="hero-image">
+                        <img src="{{ url_for('static',filename='img/hero.png') }}" alt="Hero Image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Hero End -->
+    <!-- Class Start -->
+    <div class="class">
+        <div class="container">
+            <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
+                <p>Our Classes</p>
+                <h2>Yoga Class Shedule</h2>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <ul id="class-filter">
+                        <li data-filter="*" class="filter-active">All Classes</li>
+                        <li data-filter=".filter-1">Pilates Yoga</li>
+                        <li data-filter=".filter-2">Hatha Yoga</li>
+                        <li data-filter=".filter-3">Vinyasa yoga</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row class-container">
+                <div class="col-lg-4 col-md-6 col-sm-12 class-item filter-1 wow fadeInUp" data-wow-delay="0.0s">
+                    <div class="class-wrap">
+                        <div class="class-img">
+                            <img src="{{ url_for('static',filename='img/class-1.jpg') }}" alt="Image">
+                        </div>
+                        <div class="class-text">
+                            <div class="class-teacher">
+                                <img src="{{ url_for('static',filename='img/teacher-1.png') }}" alt="Image">
+                                <h3>Elise Moran</h3>
+                                <a href="">+</a>
+                            </div>
+                            <h2>Pilates Yoga</h2>
+                            <div class="class-meta">
+                                <p><i class="far fa-calendar-alt"></i>Sun, Tue, Thu</p>
+                                <p><i class="far fa-clock"></i>9:00 - 10:00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 class-item filter-2 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="class-wrap">
+                        <div class="class-img">
+                            <img src="{{ url_for('static',filename='img/class-2.jpg') }}" alt="Image">
+                        </div>
+                        <div class="class-text">
+                            <div class="class-teacher">
+                                <img src="{{ url_for('static',filename='img/teacher-2.png') }}" alt="Image">
+                                <h3>Kate Glover</h3>
+                                <a href="">+</a>
+                            </div>
+                            <h2>Iyengar Yoga</h2>
+                            <div class="class-meta">
+                                <p><i class="far fa-calendar-alt"></i>Sun, Tue, Thu</p>
+                                <p><i class="far fa-clock"></i>9:00 - 10:00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 class-item filter-3 wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="class-wrap">
+                        <div class="class-img">
+                            <img src="{{ url_for('static',filename='img/class-3.jpg') }}" alt="Image">
+                        </div>
+                        <div class="class-text">
+                            <div class="class-teacher">
+                                <img src="{{ url_for('static',filename='img/teacher-3.png') }}" alt="Image">
+                                <h3>Elina Ekman</h3>
+                                <a href="">+</a>
+                            </div>
+                            <h2>Ashtanga yoga</h2>
+                            <div class="class-meta">
+                                <p><i class="far fa-calendar-alt"></i>Sun, Tue, Thu</p>
+                                <p><i class="far fa-clock"></i>9:00 - 10:00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 class-item filter-1 wow fadeInUp" data-wow-delay="0.6s">
+                    <div class="class-wrap">
+                        <div class="class-img">
+                            <img src="{{ url_for('static',filename='img/class-4.jpg') }}" alt="Image">
+                        </div>
+                        <div class="class-text">
+                            <div class="class-teacher">
+                                <img src="{{ url_for('static',filename='img/teacher-4.png') }}" alt="Image">
+                                <h3>Lilly Fry</h3>
+                                <a href="">+</a>
+                            </div>
+                            <h2>Hatha Yoga</h2>
+                            <div class="class-meta">
+                                <p><i class="far fa-calendar-alt"></i>Sun, Tue, Thu</p>
+                                <p><i class="far fa-clock"></i>9:00 - 10:00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 class-item filter-2 wow fadeInUp" data-wow-delay="0.8s">
+                    <div class="class-wrap">
+                        <div class="class-img">
+                            <img src="{{ url_for('static',filename='img/class-5.jpg') }}" alt="Image">
+                        </div>
+                        <div class="class-text">
+                            <div class="class-teacher">
+                                <img src="{{ url_for('static',filename='img/teacher-5.png') }}" alt="Image">
+                                <h3>Olivia Yates</h3>
+                                <a href="">+</a>
+                            </div>
+                            <h2>Kundalini Yoga</h2>
+                            <div class="class-meta">
+                                <p><i class="far fa-calendar-alt"></i>Sun, Tue, Thu</p>
+                                <p><i class="far fa-clock"></i>9:00 - 10:00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 class-item filter-3 wow fadeInUp" data-wow-delay="1s">
+                    <div class="class-wrap">
+                        <div class="class-img">
+                            <img src="{{ url_for('static',filename='img/class-6.jpg') }}" alt="Image">
+                        </div>
+                        <div class="class-text">
+                            <div class="class-teacher">
+                                <img src="{{ url_for('static',filename='img/teacher-6.png') }}" alt="Image">
+                                <h3>Millie Harper</h3>
+                                <a href="">+</a>
+                            </div>
+                            <h2>Vinyasa yoga</h2>
+                            <div class="class-meta">
+                                <p><i class="far fa-calendar-alt"></i>Sun, Tue, Thu</p>
+                                <p><i class="far fa-clock"></i>9:00 - 10:00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Class End -->
+
+    <!-- Team Start -->
+    <div class="team">
+        <div class="container">
+            <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
+                <p>Yoga Trainer</p>
+                <h2>Expert Yoga Trainer</h2>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.0s">
+                    <div class="team-item">
+                        <div class="team-img">
+                            <img src="{{ url_for('static',filename='img/team-1.jpg') }}" alt="Image">
+                            <div class="team-social">
+                                <a href=""><i class="fab fa-twitter"></i></a>
+                                <a href=""><i class="fab fa-facebook-f"></i></a>
+                                <a href=""><i class="fab fa-linkedin-in"></i></a>
+                                <a href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                        <div class="team-text">
+                            <h2>Millie Harper</h2>
+                            <p>Yoga Teacher</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="team-item">
+                        <div class="team-img">
+                            <img src="{{ url_for('static',filename='img/team-2.jpg') }}" alt="Image">
+                            <div class="team-social">
+                                <a href=""><i class="fab fa-twitter"></i></a>
+                                <a href=""><i class="fab fa-facebook-f"></i></a>
+                                <a href=""><i class="fab fa-linkedin-in"></i></a>
+                                <a href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                        <div class="team-text">
+                            <h2>Lilly Fry</h2>
+                            <p>Yoga Teacher</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="team-item">
+                        <div class="team-img">
+                            <img src="{{ url_for('static',filename='img/team-3.jpg') }}" alt="Image">
+                            <div class="team-social">
+                                <a href=""><i class="fab fa-twitter"></i></a>
+                                <a href=""><i class="fab fa-facebook-f"></i></a>
+                                <a href=""><i class="fab fa-linkedin-in"></i></a>
+                                <a href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                        <div class="team-text">
+                            <h2>Elise Moran</h2>
+                            <p>Yoga Teacher</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
+                    <div class="team-item">
+                        <div class="team-img">
+                            <img src="{{ url_for('static',filename='img/team-4.jpg') }}" alt="Image">
+                            <div class="team-social">
+                                <a href=""><i class="fab fa-twitter"></i></a>
+                                <a href=""><i class="fab fa-facebook-f"></i></a>
+                                <a href=""><i class="fab fa-linkedin-in"></i></a>
+                                <a href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                        <div class="team-text">
+                            <h2>Kate Glover</h2>
+                            <p>Yoga Teacher</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Team End -->
+
+
+
+    <main class="content">
+        {% block content %}
+
+        {% endblock %}
+
+    </main>
+
+
+
+    <!-- Footer Start -->
+    <div class="footer wow fadeIn" data-wow-delay="0.3s">
+        <div class="container-fluid">
+            <div class="container">
+                <div class="footer-info">
+                    <a href="/" class="footer-logo">Y<span>oo</span>ga</a>
+                    <h3>123 Street, New York, USA</h3>
+                    <div class="footer-menu">
+                        <p>+012 345 67890</p>
+                        <p>info@example.com</p>
+                    </div>
+                    <div class="footer-social">
+                        <a href=""><i class="fab fa-twitter"></i></a>
+                        <a href=""><i class="fab fa-facebook-f"></i></a>
+                        <a href=""><i class="fab fa-youtube"></i></a>
+                        <a href=""><i class="fab fa-instagram"></i></a>
+                        <a href=""><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="container copyright">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>&copy; <a href="#">Yooga</a>, All Right Reserved.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <p>Designed By <a href="https://htmlcodex.com">HTML Codex</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <p>
+        {% if cr %}
+        {{cr}}
+        {% else %}
+        2021 Flask FrameWork Project By:- Vikas Sharma
+        {% endif %}
+    </p>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ url_for('static',filename='lib/easing/easing.min.js') }}"></script>
+    <script src="{{ url_for('static',filename='lib/wow/wow.min.js') }}"></script>
+    <script src="{{ url_for('static',filename='lib/owlcarousel/owl.carousel.min.js') }}"></script>
+    <script src="{{ url_for('static',filename='lib/isotope/isotope.pkgd.min.js') }}"></script>
+    <script src="{{ url_for('static',filename='lib/lightbox/js/lightbox.min.js') }}"></script>
+
+
+    <!-- Template Javascript -->
+    <script src="{{ url_for('static',filename='js/main.js') }}"></script>
+
+</body>
+
+</html>
