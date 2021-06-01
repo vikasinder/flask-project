@@ -6,7 +6,9 @@
         "class_days": ["Sun" , "Tue" , "Thu"],
         "class_timing": "9:00 - 10:00",
         "class_teacher_img": "/static/img/teacher-1.png",
-        "class_desc": "my name is khan1"
+        "class_desc": "my name is khan1",
+        "category": "Expert",
+        "unique_id":"1"
     },
     {
         "Instructor_name": "Kate Glover",
@@ -15,7 +17,9 @@
         "class_days": ["Thru" , "Fri" ],
         "class_timing": "9:00 - 10:00",
         "class_teacher_img": "/static/img/teacher-2.png",
-        "class_desc": "my name is khan2"
+        "class_desc": "my name is khan2",
+        "category": "Expert",
+        "unique_id":"2"
     },
     {
         "Instructor_name": "Elina Ekman",
@@ -24,7 +28,9 @@
         "class_days": ["Wed" , "Fri" , "Sun"],
         "class_timing": "9:00 - 10:00",
         "class_teacher_img": "/static/img/teacher-3.png",
-        "class_desc": "my name is khan3"
+        "class_desc": "my name is khan3",
+        "category": "Learner",
+        "unique_id":"3"
     },
 
     {
@@ -34,7 +40,9 @@
         "class_days": ["Sat" , "Sun" , "Mon"],
         "class_timing": "9:00 - 10:00",
         "class_teacher_img": "/static/img/teacher-4.png",
-        "class_desc": "my name is khan4"
+        "class_desc": "my name is khan4",
+        "category": "Expert",
+        "unique_id":"4"
     },
     {
         "Instructor_name": "Olivia Yates",
@@ -43,7 +51,9 @@
         "class_days": ["Sun" , "Mon" , "Tue"],
         "class_timing": "9:00 - 10:00",
         "class_teacher_img": "/static/img/teacher-5.png",
-        "class_desc": "my name is khan5"
+        "class_desc": "my name is khan5",
+        "category": "Learner",
+        "unique_id":"5"
     },
     {
         "Instructor_name": "Millie Harper",
@@ -52,7 +62,9 @@
         "class_days": ["wed" , "Thru" , "Fri"],
         "class_timing": "9:00 - 10:00",
         "class_teacher_img": "/static/img/teacher-6.png",
-        "class_desc": "my name is khan6"
+        "class_desc": "my name is khan6",
+        "category": "Expert",
+        "unique_id":"6"
     }
 
 ]

@@ -3,6 +3,13 @@ import os
 
 app = Flask(__name__)
 
+@app.context_processor
+def utility_processor():
+    data=[]
+    with open("data/yoga.json") as yoga_json:
+        data=json.load(yoga_json)
+    return dict(values=data)
+
 
 @app.route('/')  # http://127.0.0.1:5000/
 def home():
@@ -19,10 +26,8 @@ def aboutus():
 
 @app.route('/services')  # http://127.0.0.1:5000/about_us
 def services():
-    data=[]
-    with open("data/yoga.json") as yoga_json:
-        data=json.load(yoga_json)
-    return render_template('services.html',values=data)
+   
+    return render_template('services.html')
 
 
 @app.route('/contact')  # http://127.0.0.1:5000/services
