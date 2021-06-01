@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, json
 import os
 
 app = Flask(__name__)
@@ -6,8 +6,10 @@ app = Flask(__name__)
 
 @app.route('/')  # http://127.0.0.1:5000/
 def home():
- 
-    return render_template('index.html')
+    data=[]
+    with open("data/yoga.json") as yoga_json:
+        data=json.load(yoga_json)
+    return render_template('index.html', values=data)
 
 # to embed python code in html we use jinja technique
 
