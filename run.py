@@ -6,10 +6,8 @@ app = Flask(__name__)
 
 @app.route('/')  # http://127.0.0.1:5000/
 def home():
-    data=[]
-    with open("data/yoga.json") as yoga_json:
-        data=json.load(yoga_json)
-    return render_template('index.html', values=data)
+   
+    return render_template('index.html' )
 
 # to embed python code in html we use jinja technique
 
@@ -21,7 +19,10 @@ def aboutus():
 
 @app.route('/services')  # http://127.0.0.1:5000/about_us
 def services():
-    return render_template('services.html')
+    data=[]
+    with open("data/yoga.json") as yoga_json:
+        data=json.load(yoga_json)
+    return render_template('services.html',values=data)
 
 
 @app.route('/contact')  # http://127.0.0.1:5000/services
