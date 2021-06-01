@@ -1,57 +1,57 @@
 [{
         "Instructor_name": "Elise Moran",
-        "class-name": "Pilates Yoga",
-        "class-img": "{{ url_for('static',filename='img/class-1.jpg') }}",
+        "class_yoga": "Pilates Yoga",
+        "class_img": "/static/img/class-1.jpg",
         "class_days": "Sun , Tue , Thu",
         "class_timing": "9:00 - 10:00",
-        "class-teacher-img": "{{ url_for('static',filename='img/teacher-1.png') }}",
-        "class-desc": "my name is khan1"
+        "class_teacher_img": "/static/img/teacher-1.png",
+        "class_desc": "my name is khan1"
     },
     {
         "Instructor_name": "Kate Glover",
-        "class-name": "Iyengar Yoga",
-        "class-img": "{{ url_for('static',filename='img/class-2.jpg') }}",
+        "class_yoga": "Iyengar Yoga",
+        "class_img": "/static/img/class-2.jpg",
         "class_days": "Sun , Tue , Thu",
         "class_timing": "9:00 - 10:00",
-        "class-teacher-img": "{{ url_for('static',filename='img/teacher-2.png') }}",
-        "class-desc": "my name is khan2"
+        "class_teacher_img": "/static/img/teacher-2.png",
+        "class_desc": "my name is khan2"
     },
     {
         "Instructor_name": "Elina Ekman",
-        "class-name": "Ashtanga yoga",
-        "class-img": "{{ url_for('static',filename='img/class-3.jpg') }}",
+        "class_yoga": "Ashtanga yoga",
+        "class_img": "/static/img/class-3.jpg",
         "class_days": "Sun , Tue , Thu",
         "class_timing": "9:00 - 10:00",
-        "class-teacher-img": "{{ url_for('static',filename='img/teacher-3.png') }}",
-        "class-desc": "my name is khan3"
+        "class_teacher_img": "/static/img/teacher-3.png",
+        "class_desc": "my name is khan3"
     },
 
     {
         "Instructor_name": "Lilly Fry",
-        "class-name": "Hatha Yoga",
-        "class-img": "{{ url_for('static',filename='img/class-4.jpg') }}",
+        "class_yoga": "Hatha Yoga",
+        "class_img": "/static/img/class-4.jpg",
         "class_days": "Sun , Tue , Thu",
         "class_timing": "9:00 - 10:00",
-        "class-teacher-img": "{{ url_for('static',filename='img/teacher-4.png') }}",
-        "class-desc": "my name is khan4"
+        "class_teacher_img": "/static/img/teacher-4.png",
+        "class_desc": "my name is khan4"
     },
     {
         "Instructor_name": "Olivia Yates",
-        "class-name": "Kundalini Yoga",
-        "class-img": "{{ url_for('static',filename='img/class-5.jpg') }}",
+        "class_yoga": "Kundalini Yoga",
+        "class_img": "/static/img/class-5.jpg",
         "class_days": "Sun , Tue , Thu",
         "class_timing": "9:00 - 10:00",
-        "class-teacher-img": "{{ url_for('static',filename='img/teacher-5.png') }}",
-        "class-desc": "my name is khan5"
+        "class_teacher_img": "/static/img/teacher-5.png",
+        "class_desc": "my name is khan5"
     },
     {
         "Instructor_name": "Millie Harper",
-        "class-name": "Vinyasa yoga",
-        "class-img": "{{ url_for('static',filename='img/class-6.jpg') }}",
+        "class_yoga": "Vinyasa yoga",
+        "class_img": "/static/img/class-6.jpg",
         "class_days": "Sun , Tue , Thu",
         "class_timing": "9:00 - 10:00",
-        "class-teacher-img": "{{ url_for('static',filename='img/teacher-6.png') }}",
-        "class-desc": "my name is khan6"
+        "class_teacher_img": "/static/img/teacher-6.png",
+        "class_desc": "my name is khan6"
     }
 
 ]
