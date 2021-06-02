@@ -8,21 +8,21 @@ app = Flask(__name__)
 
 app.secret_key=os.environ.get("SECRET_KEY")
 
-# @app.context_processor
-# def utility_processor():
-#     data=[]
-#     with open("data/yoga.json") as yoga_json:
-#         data=json.load(yoga_json)
-#     return dict(values=data)
+@app.context_processor
+def utility_processor():
+    data=[]
+    with open("data/yoga.json") as yoga_json:
+        data=json.load(yoga_json)
+    return dict(values=data)
 
 
 @app.route('/')  # http://127.0.0.1:5000/
 def home():
-    data=[]
-    with open("data/yoga.json") as yoga_json:
-        data=json.load(yoga_json)
+    # data=[]
+    # with open("data/yoga.json") as yoga_json:
+    #     data=json.load(yoga_json)
    
-    return render_template('index.html', values=data )
+    return render_template('index.html' )
 
 # to embed python code in html we use jinja technique
 
@@ -32,7 +32,7 @@ def aboutus():
     return render_template('aboutus.html')
 
 
-@app.route('/index/<class_yoga>')  # http://127.0.0.1:5000/about_us
+@app.route('/base/<class_yoga>')  # http://127.0.0.1:5000/about_us
 def about_yoga(class_yoga):
     yoga={}
     with open("data/yoga.json") as yoga_json:
