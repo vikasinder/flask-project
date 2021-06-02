@@ -1,7 +1,12 @@
 from flask import Flask, render_template, json , request , flash
 import os
 
+if(os.path.exists("env.py")):
+    import env
+
 app = Flask(__name__)
+
+app.secret_key=os.environ.get("SECRET_KEY")
 
 # @app.context_processor
 # def utility_processor():
@@ -46,8 +51,8 @@ def services():
 @app.route('/contact',methods=["GET","POST"])  # http://127.0.0.1:5000/services
 def contact():
     if request.method=="POST":
-        print(request.form["email"])
-        print("hello")
+        
+        flash("Thanks  {} , We Have Receieved Your Message, Will Contact You Soon ".format(request.form.get("name")))
     return render_template('contact.html')
 
 if __name__ == "__main__":
