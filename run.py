@@ -1,4 +1,4 @@
-from flask import Flask, render_template, json , request
+from flask import Flask, render_template, json , request , flash
 import os
 
 app = Flask(__name__)
@@ -46,6 +46,7 @@ def services():
 @app.route('/contact',methods=["GET","POST"])  # http://127.0.0.1:5000/services
 def contact():
     if request.method=="POST":
+        print(request.form["email"])
         print("hello")
     return render_template('contact.html')
 
