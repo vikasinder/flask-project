@@ -6,9 +6,9 @@
         "class_days": ["Sun" , "Tue" , "Thu"],
         "class_timing": "9:00 - 10:00",
         "class_teacher_img": "/static/img/teacher-1.png",
-        "class_desc": "my name is khan1",
+        "class_desc": "Pilates (or the Pilates method) is a series of about 500 exercises inspired by calisthenics, yoga and ballet. Pilates lengthens and stretches all the major muscle groups in the body in a balanced fashion. ... Yoga brings the body and mind together and is built on three main elements – exercise, breathing and meditation.",
         "category": "Expert",
-        "unique_id":"1"
+        "url":"pilates"
     },
     {
         "Instructor_name": "Kate Glover",
@@ -17,9 +17,9 @@
         "class_days": ["Thru" , "Fri" ],
         "class_timing": "9:00 - 10:00",
         "class_teacher_img": "/static/img/teacher-2.png",
-        "class_desc": "my name is khan2",
+        "class_desc": "Iyengar Yoga is a form of yoga as exercise with a focus on the structural alignment of the physical body through the practice of asanas. It differs from other styles of yoga in three ways: precision, sequence and use of props. ... Iyengar Yoga led the use of props, designing suitable means to assist practitioners.",
         "category": "Expert",
-        "unique_id":"2"
+        "url":"iyengar"
     },
     {
         "Instructor_name": "Elina Ekman",
@@ -28,9 +28,9 @@
         "class_days": ["Wed" , "Fri" , "Sun"],
         "class_timing": "9:00 - 10:00",
         "class_teacher_img": "/static/img/teacher-3.png",
-        "class_desc": "my name is khan3",
-        "category": "Learner",
-        "unique_id":"3"
+        "class_desc": "Ashtanga Vinyasa Yoga is a style of yoga as exercise popularised by K. Pattabhi Jois during the 20th century, often promoted as a modern-day form of classical Indian yoga.[1] He claimed to have learnt the system from his teacher, Tirumalai Krishnamacharya. The style is energetic, synchronising breath with movements. The individual poses (asanas) are linked by flowing movements (vinyasas).[2] Jois established his Ashtanga Yoga Research Institute in 1948.[3] The current style of teaching is called Mysore style after the city in India where the practice was originally taught.[4] Ashtanga Vinyasa Yoga has given rise to various spinoff styles of Power Yoga.", 
+        "category": "Learner", 
+        "url":"ashtanga"
     },
 
     {
@@ -40,9 +40,9 @@
         "class_days": ["Sat" , "Sun" , "Mon"],
         "class_timing": "9:00 - 10:00",
         "class_teacher_img": "/static/img/teacher-4.png",
-        "class_desc": "my name is khan4",
+        "class_desc": "Hatha yoga is the branch of yoga that typically comes to mind when you think of yoga in general terms. The practice involves breath, body, and mind, and classes are usually 45 minutes to 90 minutes of breathing, yoga poses, and meditation.",
         "category": "Expert",
-        "unique_id":"4"
+        "url":"hatha"
     },
     {
         "Instructor_name": "Olivia Yates",
@@ -51,9 +51,9 @@
         "class_days": ["Sun" , "Mon" , "Tue"],
         "class_timing": "9:00 - 10:00",
         "class_teacher_img": "/static/img/teacher-5.png",
-        "class_desc": "my name is khan5",
+        "class_desc": "Kundalini yoga is a form of yoga that involves chanting, singing, breathing exercises, and repetitive poses. Its purpose is to activate your Kundalini energy, or shakti. This is a spiritual energy that's said to be located at the base of your spine.",
         "category": "Learner",
-        "unique_id":"5"
+        "url":"kundalini"
     },
     {
         "Instructor_name": "Millie Harper",
@@ -62,9 +62,9 @@
         "class_days": ["wed" , "Thru" , "Fri"],
         "class_timing": "9:00 - 10:00",
         "class_teacher_img": "/static/img/teacher-6.png",
-        "class_desc": "my name is khan6",
+        "class_desc": "Vinyasa stands in opposition to hatha. Hatha classes tend to focus on one pose at a time with rest in between. In contrast, flow classes string poses together to make a sequence. The sequence may be fixed, as in Ashtanga in which the poses are always done in the same order, but most of the time vinyasa teachers have the discretion to arrange the progression of poses in their own ways.",
         "category": "Expert",
-        "unique_id":"6"
+        "url":"vinyasa"
     }
 
 ]
