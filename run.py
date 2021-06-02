@@ -1,4 +1,4 @@
-from flask import Flask, render_template, json
+from flask import Flask, render_template, json , request
 import os
 
 app = Flask(__name__)
@@ -43,8 +43,10 @@ def services():
     return render_template('services.html')
 
 
-@app.route('/contact')  # http://127.0.0.1:5000/services
+@app.route('/contact',methods=["GET","POST"])  # http://127.0.0.1:5000/services
 def contact():
+    if request.method=="POST":
+        print("hello")
     return render_template('contact.html')
 
 if __name__ == "__main__":
