@@ -1,30 +1,40 @@
 [{
-
+        "yoga_feature":"Heal Emotions",
         "yoga_details": "Initial study results revealed that participation in trauma-informed gentle yoga leads to a significant reduction in symptoms of post-traumatic stress.Through Yoga (and many other modalities) we can change and redirect our emotions. We refer to our emotions in Yoga as our ’emotional body’. Initially students may start by acknowledging that this ‘body’ exists within and that we can stand outside of it and compassionately observe without judgement (when possible) knowing that it changes all of the time. That it can have a huge influence on how we are and how aware and mindful we can be in any given moment.",
+        "image_url":"/static/img/portfolio-1.jpg",
         "url": "one"
     },
     {
+        "yoga_feature":"Body Refreshes",
         "yoga_details": "Yoga is an ancient Indian spiritual science comprising of physical and mental practices. It is the process of elevating oneself through the process of calming the mind. In simple terms Yoga means to give complete rest to body, mind and our entire being to feel refresh and energetic to be able to work again for days and months to come. Yoga ttc, Hatha Yoga teacher training course Mind-Body Connection According to Yoga whole creation exists on a single firmament of matter. Both body and mind are matter existing with different intensity. The body affects the mind and vice-versa. Yoga soothes both the mind and body and bridges the gap between the two. Yoga School in India, Best Yoga School in India Mental recharge when our mind is cluttered with thoughts it creates disturbances and fails to help us in daily life.  This is because when mind is filled with different thoughts it becomes weak and makes us feel tire. Yoga trains us to reduce unnecessary thoughts and eventually focus our mind on a single thought. When mind is able to stay on single object it becomes strong and make us efficient and energetic. Self Delight",
+        "image_url":"/static/img/portfolio-2.jpg",
         "url": "two"
   
     },
-    {
+    {   "yoga_feature":"Mind & Serenity",
         "yoga_details": "Stress and anxiety is very much part of everyone’s life. It could be due to multiple issues that one has to face on a daily basis such as work issues, health problem or relationship challenges, etc. Dealing with difficult times can trigger a wave of negative & toxic thoughts which further result in mental, physical & emotional exhaustion. Yoga is considered as one of the best ways to keep the mind and body in a healthy state both inside-out. Yoga is a mind-body practice with which one can find serenity in this hectic technological age. Yoga has a trans-formative power of deep healing & spiritual growth. Just like meditation, restorative yoga poses can help you shed down all the racing thoughts which tend to occupy the mind and give birth to anxiety & stress.",
+        "image_url":"/static/img/portfolio-3.jpg",
         "url": "three"
   
     },
     {
+        "yoga_feature":"Enjoy Your life",
         "yoga_details": "Has yoga changed your life? It’s pretty likely, since just about everyone who practices yoga has been touched in some way by its transformative power. Maybe you simply feel better in your body. Perhaps you’ve experienced more profound changes in your life, relationships, and worldview. But because these changes often take place over time, as part of a subtle and organic process, it can sometimes be hard to pinpoint exactly what it is about yoga that helps you to live a better life.ParaYoga founder and Tantra scholar Rod Stryker says that to truly understand why yoga is so transformative, you first have to understand the concept of transformation. The idea that yoga changes you into someone better than the person you were before is something of a misconception, Stryker says. It is more accurate to say that yoga helps you remove the obstacles that obscure who you really are, that it helps you come into a fuller expression of your true nature.",
+        "image_url":"/static/img/portfolio-4.jpg",
         "url": "four"
   
     },
     {
+        "yoga_feature":"Body & Spirituality",
         "yoga_details": "While most people take up yoga training for its physical benefits, the practice of yoga can benefit us in various other ways. Yoga is deeply rooted in spirituality and many of the postures have deeper objectives that go beyond simple stretching and strengthening of muscles. The holistic effect that is attained through yoga enables practitioners to not only improve their physical strength and flexibility, but also their emotions, mentality and concentration. This ancient science goes far beyond the mere physical aspects, by way of deepening the connection between mind, body and most important of all, the spirit. The spiritual aspect of yoga can help yogis develop integration of the inner being as well as oneness with the Supreme Consciousness. And it all starts with the body and the asanas or postures.",
+        "image_url":"/static/img/portfolio-5.jpg",
         "url": "five"
   
     },
     {
+        "yoga_feature":"Body & Mind",
         "yoga_details": "While most people take up yoga training for its physical benefits, the practice of yoga can benefit us in various other ways. Yoga is deeply rooted in spirituality and many of the postures have deeper objectives that go beyond simple stretching and strengthening of muscles. The holistic effect that is attained through yoga enables practitioners to not only improve their physical strength and flexibility, but also their emotions, mentality and concentration. This ancient science goes far beyond the mere physical aspects, by way of deepening the connection between mind, body and most important of all, the spirit. The spiritual aspect of yoga can help yogis develop integration of the inner being as well as oneness with the Supreme Consciousness. And it all starts with the body and the asanas or postures.",
+        "image_url":"/static/img/portfolio-6.jpg",
         "url": "six"
   
     }

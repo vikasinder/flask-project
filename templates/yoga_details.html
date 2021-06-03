@@ -4,13 +4,14 @@
 <div class="container">
     <div class="row">
         <div class="col-md-5">
-        
-            <h2 class="col-md-7">{{ details_yoga.yoga_details }}</h2>
+            <img src="{{ details_yoga.image_url }}" alt="Image for {{ details_yoga.yoga_feature }}">
+         
+            <h2 class="col-md-10 mt-2">{{ details_yoga.yoga_feature }}</h2>
         </div>
     </div>
 
     <div class="col-md-12 mt-2">
-        <p>{{details_yoga.url }}</p>
+        <p>{{details_yoga.yoga_details }}</p>
     </div>
 </div>
 
