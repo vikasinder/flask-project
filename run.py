@@ -15,24 +15,24 @@ def utility_processor():
         data=json.load(yoga_json)
     return dict(values=data)
 
+@app.context_processor
+def utility_processor():
+    data1=[]
+    with open("data/yoga_details.json") as y_json:
+        data1=json.load(y_json)
+    return dict(details=data1)
 
-@app.route('/')  # http://127.0.0.1:5000/
+@app.route('/')  
 def home():
-    # data=[]
-    # with open("data/yoga.json") as yoga_json:
-    #     data=json.load(yoga_json)
-   
-    return render_template('index.html' )
-
-# to embed python code in html we use jinja technique
+    return render_template('index.html')
 
 
-@app.route('/aboutus')  # http://127.0.0.1:5000/about_us
+@app.route('/aboutus')  
 def aboutus():
     return render_template('aboutus.html')
 
 
-@app.route('/base/<class_yoga>')  # http://127.0.0.1:5000/about_us
+@app.route('/base/<class_yoga>')  
 def about_yoga(class_yoga):
     yoga={}
     with open("data/yoga.json") as yoga_json:
@@ -42,18 +42,28 @@ def about_yoga(class_yoga):
                 yoga=val
     return render_template('yoga.html', yoga_value=yoga)
 
-@app.route('/services')  # http://127.0.0.1:5000/about_us
+@app.route('/services')  
 def services():
    
     return render_template('services.html')
 
 
-@app.route('/contact',methods=["GET","POST"])  # http://127.0.0.1:5000/services
+@app.route('/services/<yoga_details>')  
+def details(yoga_details):
+    y_details={}
+    with open("data/yoga_details.json") as details_json:
+        data=json.load(details_json)
+        for value in data:
+            if value["url"] == yoga_details:
+                    y_details=value
+        return render_template('yoga_details.html', details_yoga=y_details)
+
+@app.route('/contact',methods=["GET","POST"])  
 def contact():
     if request.method=="POST":
-        
         flash("Thanks  {} , We Have Receieved Your Message, Will Contact You Soon ".format(request.form.get("name")))
     return render_template('contact.html')
+
 
 if __name__ == "__main__":
     app.run(

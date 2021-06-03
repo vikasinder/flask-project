@@ -1,15 +1,16 @@
 {% extends "base.html" %}
 {% block content %}
+
 <div class="container">
     <div class="row">
         <div class="col-md-5">
-            <img src="{{ yoga_value.class_img }}" alt="Image for {{ yoga_value.class_yoga }}">
-            <h2 class="col-md-7">{{ yoga_value.class_yoga }}</h2>
+        
+            <h2 class="col-md-7">{{ details_yoga.yoga_details }}</h2>
         </div>
     </div>
 
     <div class="col-md-12 mt-2">
-        <p>{{yoga_value.class_desc }}</p>
+        <p>{{details_yoga.url }}</p>
     </div>
 </div>
 

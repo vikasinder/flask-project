@@ -65,10 +65,10 @@
                 <div class="col-md-4">
                     <div class="top-bar-right">
                         <div class="social">
-                            <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
-                            <a href="https://facebook.com/"><i class="fab fa-facebook-f"></i></a>
-                            <a href="https://instagram.com/"><i class="fab fa-instagram"></i></a>
-                            <a href="https://linkedin.in/"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+                            <a href="https://facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a href="https://linkedin.in/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
                         </div>
                     </div>
                 </div>
@@ -87,9 +87,9 @@
 
             <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                 <div class="navbar-nav ml-auto">
-                    <a href="{{url_for('home')}}" class="nav-item nav-link active">Home</a>
+                    <a href="{{url_for('home')}}" class="nav-item nav-link">Home</a>
                     <a href="{{url_for('aboutus')}}" class="nav-item nav-link">About Us</a>
-                    <a href="{{url_for('services')}}" class="nav-item nav-link">Service</a>
+                    <a href="{{url_for('services')}}" class="nav-item nav-link">Why Yoga ?</a>
                     <a href="{{url_for('contact')}}" class="nav-item nav-link">Contact Us</a>
                 </div>
             </div>
@@ -206,10 +206,10 @@
                         <div class="team-img">
                             <img src="{{ value.teacher_expert }}" alt="Image">
                             <div class="team-social">
-                                <a href=""><i class="fab fa-twitter"></i></a>
-                                <a href=""><i class="fab fa-facebook-f"></i></a>
-                                <a href=""><i class="fab fa-linkedin-in"></i></a>
-                                <a href=""><i class="fab fa-instagram"></i></a>
+                                <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+                                <a href="https://facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                                <a href="https://linkedin.in/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="https://instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
                             </div>
                         </div>
                         <div class="team-text">
@@ -366,11 +366,11 @@
                         <p>info@example.com</p>
                     </div>
                     <div class="footer-social">
-                        <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
-                        <a href="https://facebook.com/"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://youtube.com/"><i class="fab fa-youtube"></i></a>
-                        <a href="https://instagram.com/"><i class="fab fa-instagram"></i></a>
-                        <a href="https://linkedin.in/"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="https://instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://linkedin.in/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
             </div>
@@ -417,8 +417,7 @@
     <script src="{{ url_for('static',filename='lib/lightbox/js/lightbox.min.js') }}"></script>
 
 
-    <!-- Template Javascript -->
-
+    <script src="{{ url_for('static',filename='js/main.js')}}"></script>
 </body>
 
 </html>
