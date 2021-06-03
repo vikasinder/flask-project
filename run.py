@@ -1,3 +1,4 @@
+# Libraraies are imported that are used in this project
 from flask import Flask, render_template, json , request , flash
 import os
 
@@ -8,17 +9,22 @@ app = Flask(__name__)
 
 app.secret_key=os.environ.get("SECRET_KEY")
 
+# context processor is used here -- for passing Dictonary value on all the pages 
 @app.context_processor
 def utility_processor():
     data=[]
+    # yoga jason file is read here
     with open("data/yoga.json") as yoga_json:
         data=json.load(yoga_json)
+        # Returning Dictonary
     return dict(values=data)
 
+# context processor is used here -- for passing Dictonary value on all the pages 
 @app.context_processor
 def utility_processor():
     data1=[]
-    with open("data/yoga_details.json") as y_json:
+       # yoga_details jason file is read here
+     with open("data/yoga_details.json") as y_json:
         data1=json.load(y_json)
     return dict(details=data1)
 
@@ -31,7 +37,7 @@ def home():
 def aboutus():
     return render_template('aboutus.html')
 
-
+# dynamically passing class_yoga value 
 @app.route('/base/<class_yoga>')  
 def about_yoga(class_yoga):
     yoga={}
@@ -58,6 +64,7 @@ def details(yoga_details):
                     y_details=value
         return render_template('yoga_details.html', details_yoga=y_details)
 
+# form get/post method
 @app.route('/contact',methods=["GET","POST"])  
 def contact():
     if request.method=="POST":
