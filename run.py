@@ -13,7 +13,6 @@ app.secret_key=os.environ.get("SECRET_KEY")
 @app.context_processor
 def utility_processor():
     data=[]
-    # yoga jason file is read here
     with open("data/yoga.json") as yoga_json:
         data=json.load(yoga_json)
         # Returning Dictonary
@@ -23,8 +22,7 @@ def utility_processor():
 @app.context_processor
 def utility_processor():
     data1=[]
-       # yoga_details jason file is read here
-     with open("data/yoga_details.json") as y_json:
+    with open("data/yoga_details.json") as y_json:
         data1=json.load(y_json)
     return dict(details=data1)
 
