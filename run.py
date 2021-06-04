@@ -35,7 +35,7 @@ def home():
 def aboutus():
     return render_template('aboutus.html')
 
-# dynamically passing class_yoga value 
+# dynamically passing class_yoga values
 @app.route('/base/<class_yoga>')  
 def about_yoga(class_yoga):
     yoga={}
