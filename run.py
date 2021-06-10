@@ -1,9 +1,26 @@
 # Libraraies are imported that are used in this project
 from flask import Flask, render_template, json , request , flash
 import os
+import pymongo
 
 if(os.path.exists("env.py")):
     import env
+
+MONGO_URI = os.environ.get("MONGO_URI") 
+DATABASE ="yogaworld"
+COLLECTION="yoga_contact"
+
+def mongo_connect(url):
+    try:
+        conn = pymongo.MongoClient(url)
+        print("Mongo is connected")
+        return conn
+    except pymongo.errors.ConnectionFailure as e:
+        print("Could not connect to MongoDB: %s") % e
+
+
+conn = mongo_connect(MONGO_URI)
+coll = conn[DATABASE][COLLECTION]
 
 app = Flask(__name__)
 
@@ -66,6 +83,24 @@ def details(yoga_details):
 @app.route('/contact',methods=["GET","POST"])  
 def contact():
     if request.method=="POST":
+
+        name=request.form.get("name")
+        email=request.form.get("email")
+        phone=request.form.get("phone")
+        msg=request.form.get("message")
+
+        new_doc={
+            "name":name,
+            "email":email,
+            "phone":phone,
+            "msg":msg
+           }
+        try:
+            coll.insert(new_doc)
+            print("inserted")
+        except:
+            print("error")
+
         flash("Thanks  {} , We Have Receieved Your Message, Will Contact You Soon ".format(request.form.get("name")))
     return render_template('contact.html')
 
